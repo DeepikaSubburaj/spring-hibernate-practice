@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head >
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spring Tutorial - Spring Core Framework Tutorials - JournalDev</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v9.0.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Spring Tutorial, Spring Core Tutorial, Spring MVC Framework, Spring DAO JDBC, Hibernate, Spring Security Tutorials with 25+ eclipse project to download."/>
+<link rel="canonical" href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Spring Tutorial - Spring Core Framework Tutorials - JournalDev" />
+<meta property="og:description" content="Spring Tutorial, Spring Core Tutorial, Spring MVC Framework, Spring DAO JDBC, Hibernate, Spring Security Tutorials with 25+ eclipse project to download." />
+<meta property="og:url" content="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial" />
+<meta property="og:site_name" content="JournalDev" />
+<meta property="article:author" content="https://www.facebook.com/PankajKumarJaiswal" />
+<meta property="article:section" content="Spring" />
+<meta property="article:published_time" content="2014-05-06T23:21:24+00:00" />
+<meta property="article:modified_time" content="2017-07-19T17:01:00+00:00" />
+<meta property="og:updated_time" content="2017-07-19T17:01:00+00:00" />
+<meta property="og:image" content="https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial.png" />
+<meta property="og:image:secure_url" content="https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial.png" />
+<meta property="og:image:width" content="449" />
+<meta property="og:image:height" content="233" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Spring Tutorial, Spring Core Tutorial, Spring MVC Framework, Spring DAO JDBC, Hibernate, Spring Security Tutorials with 25+ eclipse project to download." />
+<meta name="twitter:title" content="Spring Tutorial - Spring Core Framework Tutorials - JournalDev" />
+<meta name="twitter:image" content="https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial.png" />
+<meta name="twitter:creator" content="@JournalDev" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Person","url":"https:\/\/www.journaldev.com\/","sameAs":[],"@id":"#person","name":"Pankaj Kumar"}</script>
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.journaldev.com\/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.journaldev.com\/spring","name":"Spring"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.journaldev.com\/2888\/spring-tutorial-spring-core-tutorial","name":"Spring Tutorial &#8211; Spring Core Framework Tutorials"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="amphtml" href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial/amp" /><link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="JournalDev &raquo; Feed" href="https://www.journaldev.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="JournalDev &raquo; Comments Feed" href="https://www.journaldev.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="JournalDev &raquo; Spring Tutorial &#8211; Spring Core Framework Tutorials Comments Feed" href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/cdn.journaldev.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='news-pro-theme-css'  href='https://cdn.journaldev.com/wp-content/themes/news-pro/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css'  href='https://cdn.journaldev.com/wp-content/plugins/table-of-contents-plus/screen.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://cdn.journaldev.com/wp-includes/css/dashicons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-css'  href='//fonts.googleapis.com/css?family=Raleway%3A400%2C700%7CPathway+Gothic+One&#038;ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpdreams-asl-basic-css'  href='https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/style.basic.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpdreams-ajaxsearchlite-css'  href='https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/style-simple-red.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-content/themes/genesis/lib/js/html5shiv.min.js'></script>
+<![endif]-->
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-content/themes/news-pro/js/responsive-menu.js'></script>
+<link rel='https://api.w.org/' href='https://www.journaldev.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.journaldev.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.journaldev.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel='shortlink' href='https://www.journaldev.com/?p=2888' />
+<link rel="alternate" type="application/json+oembed" href="https://www.journaldev.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.journaldev.com%2F2888%2Fspring-tutorial-spring-core-tutorial" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.journaldev.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.journaldev.com%2F2888%2Fspring-tutorial-spring-core-tutorial&#038;format=xml" />
+<head profile="https://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/png" href="https://www.journaldev.com/fav.png" />
+<script type="text/javascript" src="//cdn.thisiswaldo.com/static/js/2273.js"></script>
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/8491498/journaldev_video', [[300, 291], [630, 430]], 'div-gpt-ad-1539114023134-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script><style type="text/css">.site-title a { background: url(https://cdn.journaldev.com/wp-content/uploads/2018/07/logo1.svg) no-repeat !important; }</style>
+                <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+                      <meta name="onesignal" content="wordpress-plugin"/>
+          <link rel="manifest"
+            href="https://www.journaldev.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id="/>
+          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://www.journaldev.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = 'bab8c5d5-918b-46f8-8634-2efa6c23e327';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "https://www.journaldev.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.0818a4e7-118f-4fc1-b0e2-07892e811a2a";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-left';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['prenotify'] = true;
+oneSignal_options['notifyButton']['displayPredicate'] = function() {
+              return OneSignal.isPushNotificationsEnabled()
+                      .then(function(isPushEnabled) {
+                          return !isPushEnabled;
+                      });
+            };
+oneSignal_options['notifyButton']['showCredit'] = false;
+oneSignal_options['notifyButton']['text'] = {};
+oneSignal_options['notifyButton']['text']['message.prenotify'] = 'Stay Updated with us! Subscribe to our free notifications.';
+oneSignal_options['notifyButton']['text']['tip.state.subscribed'] = 'Thanks for subscribing!';
+oneSignal_options['notifyButton']['text']['message.action.subscribed'] = 'Thanks for subscribing!';
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+                <style type="text/css">
+                    <!--
+                    
+            @font-face {
+                font-family: 'aslsicons2';
+                src: url('https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot');
+                src: url('https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot?#iefix') format('embedded-opentype'),
+                     url('https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff2') format('woff2'),
+                     url('https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff') format('woff'),
+                     url('https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.ttf') format('truetype'),
+                     url('https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.svg#icons') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+            div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label {
+                font-size: 0px !important;
+                color: rgba(0, 0, 0, 0);
+            }
+            div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label:after {
+                font-size: 11px !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            div[id*='ajaxsearchlite'].wpdreams_asl_container {
+                width: 100%;
+                margin: 0px 0px 0px 0px;
+            }
+            div[id*='ajaxsearchliteres'].wpdreams_asl_results div.resdrg span.highlighted {
+                font-weight: bold;
+                color: rgba(217, 49, 43, 1);
+                background-color: rgba(238, 238, 238, 1);
+            }
+            div[id*='ajaxsearchliteres'].wpdreams_asl_results .results div.asl_image {
+                width: 70px;
+                height: 70px;
+            }
+            div.asl_r .results {
+                max-height: none;
+            }
+                                -->
+                </style>
+                            <script type="text/javascript">
+                if ( typeof _ASL !== "undefined" && _ASL !== null && typeof _ASL.initialize !== "undefined" )
+                    _ASL.initialize();
+            </script>
+            <link rel="icon" href="https://cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img.png" />
+<meta name="msapplication-TileImage" content="https://cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img.png" />
+		<style type="text/css" id="wp-custom-css">
+			.scriptlesssocialsharing{box-sizing:border-box;margin:18px auto}
+.scriptlesssocialsharing-buttons{border-collapse:separate;border-spacing:3px;display:table;table-layout:fixed;width:100%}
+.scriptlesssocialsharing-buttons a.button{border:none;border-radius:0;color:white;display:table-cell;text-align:center;text-decoration:none;padding:9px}
+.scriptlesssocialsharing-buttons a.button:hover{color:#fff}
+.scriptlesssocialsharing-buttons .sss-name{position:inherit;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;border:0;overflow:hidden;word-wrap:break-word}
+.scriptlesssocialsharing-buttons .button.email{background-color:#333;background-color:rgba(51,51,51,0.8)}.scriptlesssocialsharing-buttons .button.email:hover{background-color:#333}
+.scriptlesssocialsharing-buttons .button.twitter{background-color:#55acee;background-color:rgba(85,172,238,0.8)}.scriptlesssocialsharing-buttons .button.twitter:hover{background-color:#55acee}
+.scriptlesssocialsharing-buttons .button.facebook{background-color:#3b5998;background-color:rgba(59,89,152,0.8)}.scriptlesssocialsharing-buttons .button.facebook:hover{background-color:#3b5998}
+.scriptlesssocialsharing-buttons .button.linkedin{background-color:#0077b5;background-color:rgba(0,119,181,0.8)}.scriptlesssocialsharing-buttons .button.linkedin:hover{background-color:#0077b5}
+.scriptlesssocialsharing-buttons .button.google{background-color:#dc4e41;background-color:rgba(220,78,65,0.8)}.scriptlesssocialsharing-buttons .button.google:hover{background-color:#dc4e41}
+.scriptlesssocialsharing-buttons .button.pinterest {background-color: #bd081c;background-color: rgba(189, 8, 28, .8)}
+.scriptlesssocialsharing-buttons .button.pinterest:hover {background-color: #bd081c}  
+.scriptlesssocialsharing-buttons .button.reddit {background-color: #ff4500;background-color: rgba(255, 69, 0, .8)}
+.scriptlesssocialsharing-buttons .button.reddit:hover {background-color: #ff4500}
+@media print {.scriptlesssocialsharing {display: none}}		</style>
+	</head>
+<body class="post-template-default single single-post postid-2888 single-format-standard dwpb-push-page dwpb_responsive_extra_small custom-header header-image content-sidebar" itemscope itemtype="https://schema.org/WebPage"><div class="site-container"><header class="site-header" itemscope itemtype="https://schema.org/WPHeader"><div class="wrap"><div class="title-area"><p class="site-title" itemprop="headline"><a href="https://www.journaldev.com/">JournalDev</a></p><p class="site-description" itemprop="description">Java, Java EE, Android, Python, Web Development Tutorials</p></div><div class="widget-area header-widget-area">
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<section id="adswidget8-quick-adsense-3" class="widget widget_adswidget8-quick-adsense"><div class="widget-wrap"><!-- 728x90/320x50 -->
+<div id="waldo-tag-2280"></div></div></section>
+</div></div></header><nav class="nav-primary" aria-label="Main" itemscope itemtype="https://schema.org/SiteNavigationElement"><div class="wrap"><ul id="menu-new-headermenu" class="menu genesis-nav-menu menu-primary"><li id="menu-item-17036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17036"><a href="https://www.journaldev.com/java-tutorial-java-ee-tutorials" itemprop="url"><span itemprop="name">Java Tutorial</span></a></li>
+<li id="menu-item-7611" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-7611"><a href="#" itemprop="url"><span itemprop="name">#Index Posts</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-7612" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7612"><a href="https://www.journaldev.com/7153/core-java-tutorial" itemprop="url"><span itemprop="name">Core Java Tutorial</span></a></li>
+	<li id="menu-item-7613" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7613"><a href="https://www.journaldev.com/1827/java-design-patterns-example-tutorial" itemprop="url"><span itemprop="name">Java Design Patterns</span></a></li>
+	<li id="menu-item-7614" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7614"><a href="https://www.journaldev.com/2114/servlet-jsp-tutorial" itemprop="url"><span itemprop="name">Servlet JSP Tutorial</span></a></li>
+	<li id="menu-item-7615" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7615"><a href="https://www.journaldev.com/2310/struts2-tutorial-with-example-projects" itemprop="url"><span itemprop="name">Struts 2 Tutorial</span></a></li>
+	<li id="menu-item-7616" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-7616"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial" itemprop="url"><span itemprop="name">Spring Tutorial</span></a></li>
+	<li id="menu-item-7638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7638"><a href="https://www.journaldev.com/7635/jsf-tutorial" itemprop="url"><span itemprop="name">JSF Tutorial</span></a></li>
+	<li id="menu-item-7620" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7620"><a href="https://www.journaldev.com/5516/primefaces-tutorial-with-example-projects" itemprop="url"><span itemprop="name">Primefaces Tutorial</span></a></li>
+	<li id="menu-item-7619" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7619"><a href="https://www.journaldev.com/2681/jdbc-tutorial" itemprop="url"><span itemprop="name">JDBC Tutorial</span></a></li>
+	<li id="menu-item-7617" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7617"><a href="https://www.journaldev.com/3793/hibernate-tutorial" itemprop="url"><span itemprop="name">Hibernate Tutorial</span></a></li>
+	<li id="menu-item-7618" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7618"><a href="https://www.journaldev.com/6672/mongodb-tutorial-installation-example-projects-integration-with-servlet-spring-jsf" itemprop="url"><span itemprop="name">MongoDB Tutorial</span></a></li>
+</ul>
+</li>
+<li id="menu-item-7621" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7621"><a href="#" itemprop="url"><span itemprop="name">#Interview Questions</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-7622" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7622"><a href="https://www.journaldev.com/java-interview-questions" itemprop="url"><span itemprop="name">Java Interview Questions</span></a></li>
+	<li id="menu-item-23747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23747"><a href="https://www.journaldev.com/2366/core-java-interview-questions-and-answers" itemprop="url"><span itemprop="name">Core Java Interview Questions</span></a></li>
+	<li id="menu-item-7623" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7623"><a href="https://www.journaldev.com/2529/jdbc-interview-questions-and-answers" itemprop="url"><span itemprop="name">JDBC Interview Questions</span></a></li>
+	<li id="menu-item-7624" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7624"><a href="https://www.journaldev.com/2015/servlet-interview-questions-and-answers" itemprop="url"><span itemprop="name">Servlet Interview Questions</span></a></li>
+	<li id="menu-item-7625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7625"><a href="https://www.journaldev.com/2110/jsp-interview-questions-and-answers" itemprop="url"><span itemprop="name">JSP Interview Questions</span></a></li>
+	<li id="menu-item-7626" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7626"><a href="https://www.journaldev.com/2354/struts2-interview-questions-and-answers" itemprop="url"><span itemprop="name">Struts2 Interview Questions</span></a></li>
+	<li id="menu-item-7627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7627"><a href="https://www.journaldev.com/2696/spring-interview-questions-and-answers" itemprop="url"><span itemprop="name">Spring Interview Questions</span></a></li>
+	<li id="menu-item-7628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7628"><a href="https://www.journaldev.com/3633/hibernate-interview-questions-and-answers" itemprop="url"><span itemprop="name">Hibernate Interview Questions</span></a></li>
+	<li id="menu-item-7629" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7629"><a href="https://www.journaldev.com/7261/jsf-interview-questions-and-answers" itemprop="url"><span itemprop="name">JSF Interview Questions</span></a></li>
+</ul>
+</li>
+<li id="menu-item-17037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17037"><a href="https://www.journaldev.com/resources" itemprop="url"><span itemprop="name">Resources</span></a></li>
+</ul></div></nav>	
+	<div class="wrapper mailchimp">
+        <div class="box"> 
+            <form action="//journaldev.us8.list-manage.com/subscribe/post-json?u=612f3d966c86000f37699d8cf&amp;id=c64db63284&SIGNUP=TOP_HEADER&c=?"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+				<span>
+					Subscribe to Download Java Design Patterns eBook
+				</span>
+				<div class="main_inputs">	
+				<input type="text" value="" name="FNAME" class="name" id="mce-name" placeholder="Full name" required>
+				
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@example.com" required>
+				
+                <input type="submit" value="Download Now" name="subscribe" id="mc-embedded-subscribe" class="mc-button">
+				</div>
+				
+				 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_612f3d966c86000f37699d8cf_c64db63284" tabindex="-1" value=""></div>
+    <div class="clear"></div>
+				
+            </form>
+                <div id="subscribe-result" style="display: none">
+					<p>Thank you for subscribing. Please check your email to confirm subscription.</p>
+                </div>
+        </div>
+    </div>
+	
+
+	<script>
+		var $ = jQuery;
+		$(document).ready(function () {
+  var $form = $('#mc-embedded-subscribe-form');
+  if ($form.length > 0) {
+    $('#mc-embedded-subscribe-form input[type="submit"]').bind('click', function (event) {
+      if (event) event.preventDefault();
+      mailchimp_email_register($form);
+    })
+  }
+})
+		
+function mc_validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function mailchimp_email_register($form) {
+	if(mc_validateEmail($("#mce-EMAIL").val() )) {
+		$('#mc-embedded-subscribe').val('Sending...');
+		$.ajax({
+			type: $form.attr('method'),
+			url: $form.attr('action'),
+			data: $form.serialize(),
+			cache: false,
+			dataType: 'json',
+			contentType: 'application/json; charset=utf-8',
+			error: function (err) { alert('Could not connect to the registration server. Please try again later.') },
+			success: function (data) {
+				$('#mc-embedded-subscribe').val('subscribe');
+				if (data.result === 'success') {
+					console.log(data.msg);
+					$('#mce-EMAIL').css('borderColor', '#ffffff');
+					$('#subscribe-result').css('color', 'rgb(53, 114, 210)');
+					$('#mc-embedded-subscribe-form').fadeOut(300);
+					$('#subscribe-result').fadeIn(300);
+					document.cookie = "subscribed=true; expires=Thu, 18 Dec 2050 12:00:00 UTC;domain=;path=/";
+					$('#mce-EMAIL').val('');
+					$('#mce-name').val('');
+				} else {
+					console.log(data.msg)
+					alert("You have already subscribed! Please try with different email.");
+				}
+			}
+		});
+	} else {
+		alert("Please enter a valid email");
+	}
+};
+	</script>
+
+<div class="site-inner"><div class="content-sidebar-wrap"><main class="content"><div class="breadcrumb" itemtype="https://schema.org/BreadcrumbList">	You are here:
+<span><span><a href="https://www.journaldev.com/" >Home</a> » <span><a href="https://www.journaldev.com/spring" >Spring</a> » <span class="breadcrumb_last">Spring Tutorial &#8211; Spring Core Framework Tutorials</span></span></span></span></div><article class="post-2888 post type-post status-publish format-standard has-post-thumbnail category-spring entry" itemscope itemtype="https://schema.org/CreativeWork"><header class="entry-header"><h1 class="entry-title" itemprop="headline">Spring Tutorial &#8211; Spring Core Framework Tutorials</h1>
+<p class="entry-meta"><span class="entry-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><a href="https://www.journaldev.com/author/pankaj" class="entry-author-link" itemprop="url" rel="author"><span class="entry-author-name" itemprop="name">Pankaj</span></a></span> <span class="entry-comments-link"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comments">39 Comments</a></span> </p></header><div class="entry-content" itemprop="text"><!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div data-type="ad" data-publisher="journaldev.com" data-zone="jd_after_entry_728x90" data-format="728x90"> </div>
+</div>
+<p><strong>Spring</strong> is one of the most widely used <strong>Java EE frameworks</strong>. I have written a lot on <strong>Spring Tutorial</strong> and this is a summary post that will work as an index to go through with all of them in order.</p>
+<div id="toc_container" class="toc_light_blue no_bullets"><p class="toc_title">Table of Contents</p><ul class="toc_list"><li><a href="#spring-tutorial"><span class="toc_number toc_depth_1">1</span> Spring Tutorial</a><ul><li><a href="#spring-core-tutorial"><span class="toc_number toc_depth_2">1.1</span> Spring Core Tutorial</a></li><li><a href="#spring-mvc-tutorial"><span class="toc_number toc_depth_2">1.2</span> Spring MVC Tutorial</a></li><li><a href="#spring-jdbc-tutorial"><span class="toc_number toc_depth_2">1.3</span> Spring JDBC Tutorial</a></li><li><a href="#spring-hibernate-tutorial"><span class="toc_number toc_depth_2">1.4</span> Spring Hibernate Tutorial</a></li><li><a href="#spring-security-tutorial"><span class="toc_number toc_depth_2">1.5</span> Spring Security Tutorial</a></li><li><a href="#spring-integration-tutorials"><span class="toc_number toc_depth_2">1.6</span> Spring Integration Tutorials</a></li><li><a href="#spring-interview-questions"><span class="toc_number toc_depth_2">1.7</span> Spring Interview Questions</a></li></ul></li></ul></div>
+<h2><span id="spring-tutorial">Spring Tutorial</span></h2>
+<p>All of the spring tutorials come with example projects that you can download from the post page.</p>
+<p><a href="https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial.png"><img   src="https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial.png"  alt="spring tutorial, spring core tutorial" width="449" height="233" class="aligncenter size-full wp-image-3646" srcset="https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial.png 449w, https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial-348x180.png 348w, https://cdn.journaldev.com/wp-content/uploads/2014/05/spring-tutorial-20x10.png 20w" sizes="(max-width: 449px) 100vw, 449px" /></a></p>
+<h3><span id="spring-core-tutorial">Spring Core Tutorial</span></h3>
+<p><a href="https://www.journaldev.com/16922/spring-framework">Spring Framework</a> is based on two design principles &#8211; <strong><a href="https://www.journaldev.com/2394/java-dependency-injection-design-pattern-example-tutorial">Dependency Injection</a></strong> and <strong>Aspect Oriented Programming</strong>. Please go through the below tutorials to learn about the core spring concepts with implementation examples.</p>
+<ol>
+<li><a href="https://www.journaldev.com/2394/java-dependency-injection-design-pattern-example-tutorial"><strong>Dependency Injection Java Example</strong></a>
+<p>This post provides the basics of Dependency Injection and how we can implement DI pattern in simple java applications. It&#8217;s a good point to start with and then move to Spring Dependency Injection.
+</li>
+<li><a href="https://www.journaldev.com/2410/spring-dependency-injection"><strong>Spring Dependency Injection</strong></a>
+<p>This tutorial is aimed to provide <strong>dependency injection example</strong> in Spring framework with both <strong>annotation based</strong> configuration and <strong>XML based</strong> configuration. The tutorial also include JUnit test program to validate the implementation.
+</li>
+<li><a href="https://www.journaldev.com/2583/spring-aop-example-tutorial-aspect-advice-pointcut-joinpoint-annotations"><strong>Spring AOP Example</strong></a>
+<p>This tutorial explains core concepts of Aspect Oriented Programming such as Aspect, Advice, Pointcut, Joinpoint, AOP Proxy and Weaving. The tutorial explains about different types of Advices with simple program.</li>
+<li><a href="https://www.journaldev.com/2461/spring-ioc-bean-example-tutorial"><strong>Spring IoC Container and Spring Bean Example Tutorial</strong></a>
+<p>This tutorial is aimed to explain core concepts of Spring IoC container and Spring Bean with example programs. The tutorial explains about IoC Container and it&#8217;s core classes and different ways to create <code>ApplicationContext</code>.</p>
+<p>The tutorial also explains about Spring Bean, Spring Bean scopes, different ways to configure spring bean &#8211; xml, annotation, java based through example project.
+</li>
+<li><a href="https://www.journaldev.com/2623/spring-autowired-annotation"><strong>Spring Bean Autowiring Example</strong></a>
+<p>Spring IoC container is smart to figure out the bean for injecting dependencies through &#8220;spring autowire&#8221; attribute. Although it&#8217;s not recommended to use autowiring but it&#8217;s good to know it. This tutorial explains about different types of autowiring with example project.
+</li>
+<li><a href="https://www.journaldev.com/2637/spring-bean-life-cycle"><strong>Spring Bean Life Cycle</strong></a>
+<p>Spring Beans are the most important part of any Spring application. Spring ApplicationContext is responsible to initialize the Spring Beans defined in spring bean configuration file. This tutorial explains about different ways through which we can provide <strong>post-initialization</strong> and <strong>pre-destroy</strong> methods in a spring bean &#8211; InitializingBean/DisposableBean interfaces or init-method/destroy-method attributes.</p>
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div data-type="ad" data-publisher="journaldev.com" data-format="300x250" data-zone="jd_post_mid_300x250" ></div>
+</div>
+
+<p>Spring framework also support <code>@PostConstruct</code> and <code>@PreDestroy</code> annotations for defining post-init and pre-destroy methods. These annotations are part of <code>javax.annotation</code> package.</p>
+<p>You will also learn about Spring Aware interfaces that you can use to inject Servlet API objects into the spring bean.
+</li>
+</ol>
+<h3><span id="spring-mvc-tutorial">Spring MVC Tutorial</span></h3>
+<ol>
+<li><a href="https://www.journaldev.com/2433/spring-mvc-tutorial"><strong>Spring MVC Tutorial for Beginners with Spring Tool Suite</strong></a>
+<p>Spring MVC modules help us in creating java based web applications. This is the first post in the spring mvc series and you will learn how to use Spring Tool Suite (STS) and create a simple Web application using Spring MVC framework.
+</li>
+<li><a href="https://www.journaldev.com/2552/spring-rest-example-tutorial-spring-restful-web-services"><strong>Spring Restful Web Service Example with JSON</strong></a>
+<p>Spring Framework provides built-in support for <a href="https://www.journaldev.com/2324/jackson-json-java-parser-api-example-tutorial" title="Jackson JSON Processing API in Java Example Tutorial">Jackson JSON</a> API and we can utilize it to create a restful web service that will return JSON response. This tutorial explains all the different parts of the application that are required to configure our application to return JSON response and implement Rest API.
+</li>
+<li><a href="https://www.journaldev.com/2573/spring-mvc-file-upload-example-single-multiple-files"><strong>Spring MVC File Upload Example</strong></a>
+<p>File uploading is one of the common tasks of web application, that&#8217;s why Spring provides built-in support for file uploading by integrating <strong>Apache Commons FileUpload</strong> API. This tutorial is aimed to provide understanding how different components are configured with example of upload single and multiple files.</li>
+<li><a href="https://www.journaldev.com/2610/spring-mvc-internationalization-i18n-and-localization-l10n-example"><strong>Spring MVC Internationalization and Localization Example</strong></a>
+<p>Any web application with users all around the world, internationalization (i18n) or localization (L10n) is very important for better user interaction.</p>
+<p>Most of the web application frameworks provide easy ways to localize the application based on user locale settings. Spring also follows the pattern and provides extensive support for internationalization (i18n) through the use of Spring interceptors, Locale Resolvers and Resource Bundles for different locales.</p>
+<p>This tutorial explain i18n and l10n process in spring web application through example project.
+</li>
+<li><a href="https://www.journaldev.com/2668/spring-validation-example-mvc-validator"><strong>Spring MVC Form Validation Example</strong></a>
+<p>When we accept user inputs in any web application, it become necessary to validate them. We can validate the user input at client side using JavaScript but it’s also necessary to validate them at server side to make sure we are processing valid data incase user has javascript disabled.</p>
+<p>Spring MVC Framework supports JSR-303 specs by default and all we need is to add JSR-303 and it’s implementation dependencies in Spring MVC application. Spring also provides <strong>@Validator</strong> annotation and <code>BindingResult</code> class through which we can get the errors raised by Validator implementation in the controller request handler method. The tutorial provide form validation example using annotations and also explains process to create our own custom validator.
+</li>
+<li><a href="https://www.journaldev.com/2651/spring-mvc-exception-handling-controlleradvice-exceptionhandler-handlerexceptionresolver"><strong>Spring MVC Exception Handling</strong></a>
+<p>Any web application requires good design for exception handling because we don’t want to serve container generated page when any unhandled exception is thrown by our application.</p>
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div data-type="ad" data-publisher="journaldev.com" data-zone="jd_leaderboard_728x90" data-format="728x90"> </div>
+</div>
+
+<p>Spring MVC Framework provides approach for robust exception handling in Controller classes, Global Exception Handler and through HandlerExceptionResolver implementation. Check out the example project in the tutorial to learn more about spring mvc exception handling.
+</li>
+<li><a href="https://www.journaldev.com/2676/spring-mvc-interceptor-example-handlerinterceptor-handlerinterceptoradapter"><strong>Spring MVC Interceptors Example</strong></a>
+<p>Sometimes we want to intercept the HTTP Request and do some processing before handing it over to the controller handler methods. That’s where Spring MVC Interceptors come handy.</p>
+<p>We can create our own interceptors in Spring by either implementing org.springframework.web.servlet.HandlerInterceptor interface or by overriding abstract class org.springframework.web.servlet.handler.HandlerInterceptorAdapter that provides the base implementation of this interface. Check out the example project in the tutorial to learn more about Spring MVC interceptors.
+</li>
+<li><a href="https://www.journaldev.com/3358/spring-requestmapping-requestparam-pathvariable-example"><strong>Spring MVC RequestMapping Example</strong></a>
+<p>@RequestMapping is one of the most widely used Spring MVC annotation. <code>org.springframework.web.bind.annotation.RequestMapping</code> annotation is used to map web requests onto specific handler classes and/or handler methods.</p>
+<p>@RequestMapping can be applied to the controller class as well as methods. This tutorial explains about different usage with examples and test program.
+</li>
+</ol>
+<h3><span id="spring-jdbc-tutorial">Spring JDBC Tutorial</span></h3>
+<p>Most of the enterprise application deals with relational databases. That&#8217;s why Spring provides extensive support for JDBC API and it also provide wrappers to perform Database CRUD operations.</p>
+<ol>
+<li><a href="https://www.journaldev.com/2593/spring-jdbc-example"><strong>Spring JDBC and JdbcTemplate CRUD with DataSource Example</strong></a>
+<p>Spring Framework provides excellent integration with JDBC API and provides JdbcTemplate utility class that we can use to avoid bolier-plate code from our database operations logic such as Opening/Closing Connection, ResultSet, PreparedStatement etc.</p>
+<p>This tutorial provides example of CRUD operations using Spring JDBC integration.
+</li>
+<li><a href="https://www.journaldev.com/2597/spring-datasource-jndi-with-tomcat-example"><strong>Spring DataSource JNDI with Tomcat Example</strong></a>
+<p>We also know that DataSource with JNDI is the preferred way to achieve connection pooling and get benefits of container implementations. This tutorial explains how we can use DataSource defined in tomcat container as JNDI resource to get database connection and perform different operations. This is the preferred way for getting database connections in a spring web application because container takes care of managing database resources.
+</li>
+<li><a href="https://www.journaldev.com/2603/spring-transaction-management-jdbc-example"><strong>Spring Transaction Management Example with JDBC</strong></a>
+<p>Transaction Management is a trivial task in any enterprise application. Spring provides extensive support for transaction management and help developers to focus more on business logic rather than worrying about data integrity. Spring declarative transaction management is the preferred approach for transaction management because it&#8217;s very easy to use and there is no direct dependency, it uses AOP and Dependency injection.
+</li>
+</ol>
+<h3><span id="spring-hibernate-tutorial">Spring Hibernate Tutorial</span></h3>
+<p>Spring is one of the most widely used Java EE framework and Hibernate is the best ORM framework in the market. That&#8217;s why Spring provides built-in support for Hibernate in <strong>Spring ORM</strong> module.</p>
+<ol>
+<li><a href="https://www.journaldev.com/3524/spring-hibernate-integration-example-tutorial"><strong>Spring Hibernate Integration Example</strong></a>
+<p>This tutorial provides complete details with example to integrate hibernate with Spring standalone application. The example shows integration between Spring 4 + Hibernate 4 as well as Spring 4 + Hibernate 3.</li>
+<li><a href="https://www.journaldev.com/3531/spring-mvc-hibernate-mysql-integration-crud-example-tutorial"><strong>Spring MVC Hibernate CRUD Example</strong></a>
+<p>Spring MVC can be easily integrated with Hibernate framework. Also we can utilize Spring Declarative transaction management, that makes our application free with boiler-plate code.</li>
+</ol>
+<h3><span id="spring-security-tutorial">Spring Security Tutorial</span></h3>
+<p>Spring Security can be applied to any <a href="https://www.journaldev.com/1854/java-web-application-tutorial-for-beginners">Java web application</a>, it works as a separate part of the application and provides different ways for authentication and authorization.</p>
+<ol>
+<li><a href="https://www.journaldev.com/2715/spring-security-example-tutorial"><strong>Spring Security in Servlet Web Application</strong></a>
+<p>This tutorial explains about the basics of spring security module. It also provides example for in-memory, DAO and JDBC based authentication with example project.</li>
+<li><a href="https://www.journaldev.com/2736/spring-security-example-userdetailsservice"><strong>Spring MVC Security Example</strong></a>
+<p>If we are using Spring MVC framework, applying spring security very easy because we already have spring based configurations. All we need is to plug in the security related configurations.
+</li>
+</ol>
+<h3><span id="spring-integration-tutorials">Spring Integration Tutorials</span></h3>
+<ol>
+<li><a href="https://www.journaldev.com/7112/spring-jsf-integration" title="JSF Spring Integration Example Tutorial"><strong>Spring JSF Integration Example Tutorial</strong></a>
+<p>JSF is a component based framework with great emphasis on user interfaces whereas Spring core principle is dependency injection. This tutorial explains how to get the best out of these by integration JSF with Spring Framework.
+</li>
+<li><a href="https://www.journaldev.com/4096/primefaces-spring-hibernate-integration-example-tutorial"><strong>Primefaces Spring &#038; Hibernate Integration Example Tutorial</strong></a>
+<p>This is one of the integration example where we have explained how to integrate PrimeFaces with Spring and Hibernate framework. This is a very commonly used combination to get the most out of each of the frameworks.</li>
+<li><a href="https://www.journaldev.com/4260/primefaces-hibernate-and-springroo-integration"><strong>PrimeFaces Hibernate SpringRoo Integration Example</strong></a>
+<p>SpringRoo is an open source software tool that uses convention-over-configuration concept to facilitate producing Java-Based enterprise software application in a driven command-line way.</p>
+<p>This tutorial explains about integration between SpringRoo, PrimeFaces and Hibernate frameworks.</li>
+</ol>
+<h3><span id="spring-interview-questions"><a href="https://www.journaldev.com/2696/spring-interview-questions-and-answers">Spring Interview Questions</a></span></h3>
+<p>If you are going for Java EE interview where Spring is a requirement, I hope this post will help you in refreshing your knowledge in quick time.</p>
+<p>That&#8217;s all for <strong>Spring tutorials</strong> for now. Spring Framework has a lot of modules and I will be posting about them in future and keep including them here. So I would suggest you to bookmark this post for future references.</p>
+
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6459403732537629"
+     data-ad-slot="7381719979"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div style="font-size: 0px; height: 0px; line-height: 0px; margin: 0; padding: 0; clear: both;"></div><div class="scriptlesssocialsharing"><div class="scriptlesssocialsharing-buttons"><a class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Spring%20Tutorial%20%E2%80%93%20Spring%20Core%20Framework%20Tutorials&#038;url=https%3A%2F%2Fwww.journaldev.com%2F2888%2Fspring-tutorial-spring-core-tutorial&#038;via=JournalDev&#038;related=JournalDev" rel="noopener"><span class="sss-name">Twitter</span></a><a class="button facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.journaldev.com%2F2888%2Fspring-tutorial-spring-core-tutorial" rel="noopener"><span class="sss-name">Facebook</span></a><a class="button linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?mini=1&#038;url=https%3A%2F%2Fwww.journaldev.com%2F2888%2Fspring-tutorial-spring-core-tutorial&#038;title=Spring%20Tutorial%20%E2%80%93%20Spring%20Core%20Framework%20Tutorials&#038;source=https://www.journaldev.com" rel="noopener"><span class="sss-name">Linkedin</span></a><a class="button email" href="mailto:?body=I%20read%20this%20post%20and%20wanted%20to%20share%20it%20with%20you.%20Here&#039;s%20the%20link:%20https%3A%2F%2Fwww.journaldev.com%2F2888%2Fspring-tutorial-spring-core-tutorial&#038;subject=A%20post%20worth%20sharing:%20Spring%20Tutorial%20%E2%80%93%20Spring%20Core%20Framework%20Tutorials" rel="noopener"><span class="sss-name">Email</span></a></div></div><div class="prev-next-navigation"><a href="https://www.journaldev.com/2736/spring-security-example-userdetailsservice" rel="prev"><div class="previous"><span class="prev_icon">&nbsp;Previous </span><br/> <span class="pagi_content">Spring Security Example UserDetailsService</span></div></a><a href="https://www.journaldev.com/3358/spring-requestmapping-requestparam-pathvariable-example" rel="next"><div class="next"><span class="next_icon">Next&nbsp;</span><br/> <span class="pagi_content">Spring MVC @RequestMapping Annotation Example with Controller, Methods, Headers, Params, @RequestParam, @PathVariable</span></div></a></div>
+		<!-- .prev-next-navigation --><section class="author-box" itemprop="author" itemscope itemtype="https://schema.org/Person"><img alt='' src='https://secure.gravatar.com/avatar/8087ef00af2610b870ada12392286695?s=120&#038;d=blank&#038;r=g' srcset='https://secure.gravatar.com/avatar/8087ef00af2610b870ada12392286695?s=240&#038;d=blank&#038;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' /><h4 class="author-box-title">About <span itemprop="name">Pankaj</span></h4><div class="author-box-content" itemprop="description"><p>If you have come this far, it means that you liked what you are reading. Why not reach little more and connect with me directly on <a href="https://plus.google.com/118104420597648001532/posts?rel=author"><strong>Google Plus</strong></a>, <a href="https://www.facebook.com/journaldev"><strong>Facebook</strong></a> or <a href="https://twitter.com/JournalDev"><strong>Twitter</strong></a>. I would love to hear your thoughts and opinions on my articles directly.</p>
+<p>Recently I started creating video tutorials too, so do check out my videos on <a href="https://www.youtube.com/user/JournalDev"><strong>Youtube</strong></a>.</p>
+</div></section></div><footer class="entry-footer"><p class="entry-meta"><span class="entry-categories">Filed Under: <a href="https://www.journaldev.com/spring" rel="category tag">Spring</a></span> </p></footer></article><div class="after-entry" class="widget-area">
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<section id="adswidget7-quick-adsense-3" class="widget widget_adswidget7-quick-adsense"><div class="widget-wrap"><!-- 728x90/970x90/970x250/320x50 -->
+<div id="waldo-tag-2281"></div></div></section>
+</div><div class="adjacent-entry-pagination pagination"><div class="pagination-previous alignleft"><a href="https://www.journaldev.com/2736/spring-security-example-userdetailsservice" rel="prev">&#x000AB; Spring Security Example UserDetailsService</a></div><div class="pagination-next alignright"><a href="https://www.journaldev.com/3358/spring-requestmapping-requestparam-pathvariable-example" rel="next">Spring MVC @RequestMapping Annotation Example with Controller, Methods, Headers, Params, @RequestParam, @PathVariable &#x000BB;</a></div></div><div class="entry-comments" id="comments"><h3>Comments</h3><ol class="comment-list">
+	<li class="comment even thread-even depth-1" id="comment-44529">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Bhuvi.S</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2018-09-18T22:37:28+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-44529" class="comment-time-link" itemprop="url">September 18, 2018 at 10:37 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Needed to compose you a very little word to thank you yet again<br />
+regarding the nice suggestions, you’ve contributed here.<br />
+Appreciating the persistence you put into your blog and detailed<br />
+the information you provide.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-44529' onclick='return addComment.moveForm( "comment-44529", "44529", "respond", "2888" )' aria-label='Reply to Bhuvi.S'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43811">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Amol</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2018-07-01T01:04:04+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-43811" class="comment-time-link" itemprop="url">July 1, 2018 at 1:04 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thanks for this post</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-43811' onclick='return addComment.moveForm( "comment-43811", "43811", "respond", "2888" )' aria-label='Reply to Amol'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-41827">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="http://crbtech.in/Java-Training/a-brief-introduction-to-spring-framework/" class="comment-author-link" rel="external nofollow" itemprop="url">pranit</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-12-17T21:14:40+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-41827" class="comment-time-link" itemprop="url">December 17, 2017 at 9:14 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Spring is a lightweight framework. It is otherwise called master of framework because it supports to other frameworks Struts, EJB, Hibernate and so on.This tutorial really helps you to understand the spring framework in easy way. Thanks a lot for sharing this article!</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-41827' onclick='return addComment.moveForm( "comment-41827", "41827", "respond", "2888" )' aria-label='Reply to pranit'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-39933">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="http://crbtech.in/Java-Training/a-brief-introduction-to-spring-framework/" class="comment-author-link" rel="external nofollow" itemprop="url">pranit patil</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-11-09T23:53:06+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-39933" class="comment-time-link" itemprop="url">November 9, 2017 at 11:53 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>helpful and interesting article. The testing and deployment of Java enterprise applications are made easier with the help of Spring. Great topic you have shared here to know about spring. Thanks for sharing!</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-39933' onclick='return addComment.moveForm( "comment-39933", "39933", "respond", "2888" )' aria-label='Reply to pranit patil'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-39813">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="http://crbtech.in/programmes/java-training-programme/" class="comment-author-link" rel="external nofollow" itemprop="url">priya</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-10-25T04:33:32+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-39813" class="comment-time-link" itemprop="url">October 25, 2017 at 4:33 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Spring is not just a framework. It’s also a complete ecosystem of supporting frameworks and tools that provide you everything you need to build complex applications. It is more important in java , Really thanks for sharing this tutorial.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-39813' onclick='return addComment.moveForm( "comment-39813", "39813", "respond", "2888" )' aria-label='Reply to priya'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-39446">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Rambabu Mutchu</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-09-12T20:48:27+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-39446" class="comment-time-link" itemprop="url">September 12, 2017 at 8:48 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>I want to Spring tutorial please send me link</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-39446' onclick='return addComment.moveForm( "comment-39446", "39446", "respond", "2888" )' aria-label='Reply to Rambabu Mutchu'>Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment even depth-2" id="comment-39884">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">A</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-11-03T09:33:23+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-39884" class="comment-time-link" itemprop="url">November 3, 2017 at 9:33 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>WOw!!! Seriously???</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-39884' onclick='return addComment.moveForm( "comment-39884", "39884", "respond", "2888" )' aria-label='Reply to A'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-39350">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">alwosaby</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-09-01T10:30:22+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-39350" class="comment-time-link" itemprop="url">September 1, 2017 at 10:30 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>thank you</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-39350' onclick='return addComment.moveForm( "comment-39350", "39350", "respond", "2888" )' aria-label='Reply to alwosaby'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-37383">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">nagalaxmi</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-02-01T17:43:01+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-37383" class="comment-time-link" itemprop="url">February 1, 2017 at 5:43 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>hi pankaj, can u please provide us spring documents like design patterns?</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-37383' onclick='return addComment.moveForm( "comment-37383", "37383", "respond", "2888" )' aria-label='Reply to nagalaxmi'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-37378">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="http://weall.com/book" class="comment-author-link" rel="external nofollow" itemprop="url">Due Ngueyn</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-02-01T03:32:27+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-37378" class="comment-time-link" itemprop="url">February 1, 2017 at 3:32 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi Pankaj, here’s a Spring boot and JPA tutorial on how to build a full hashtag messaging API <a href="http://weall.com/book/chapter?name=Download%20Messaging%20application%20using%20Hashstag%20Component%20Tutorial" rel="nofollow">http://weall.com/book/chapter?name=Download%20Messaging%20application%20using%20Hashstag%20Component%20Tutorial</a></p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-37378' onclick='return addComment.moveForm( "comment-37378", "37378", "respond", "2888" )' aria-label='Reply to Due Ngueyn'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-37317">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Aditya Gupta</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-01-23T04:58:37+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-37317" class="comment-time-link" itemprop="url">January 23, 2017 at 4:58 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi,<br />
+ My query is if how can I pass a model object from a drop down to javascript and how can I use that object in javascript?</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-37317' onclick='return addComment.moveForm( "comment-37317", "37317", "respond", "2888" )' aria-label='Reply to Aditya Gupta'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-35847">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">sunpy1106@qq.com</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-07-24T06:44:26+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-35847" class="comment-time-link" itemprop="url">July 24, 2016 at 6:44 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thank you very much ! They are very useful!</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-35847' onclick='return addComment.moveForm( "comment-35847", "35847", "respond", "2888" )' aria-label='Reply to sunpy1106@qq.com'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-34693">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Rizwana</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-05-17T03:37:41+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-34693" class="comment-time-link" itemprop="url">May 17, 2016 at 3:37 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thank you ,for such effective tutorial.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-34693' onclick='return addComment.moveForm( "comment-34693", "34693", "respond", "2888" )' aria-label='Reply to Rizwana'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-34470">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Muhammed Alagöz</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-04-08T00:40:52+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-34470" class="comment-time-link" itemprop="url">April 8, 2016 at 12:40 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Great thanks thanks thanks expect to continue :))))</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-34470' onclick='return addComment.moveForm( "comment-34470", "34470", "respond", "2888" )' aria-label='Reply to Muhammed Alagöz'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-33973">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">baswaraju</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-01-29T06:40:33+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-33973" class="comment-time-link" itemprop="url">January 29, 2016 at 6:40 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>thanks god may give some &#8230;&#8230;&#8230;.thing special</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-33973' onclick='return addComment.moveForm( "comment-33973", "33973", "respond", "2888" )' aria-label='Reply to baswaraju'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-33854">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">manu</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-01-09T02:31:28+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-33854" class="comment-time-link" itemprop="url">January 9, 2016 at 2:31 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>perfect place to get knowledge</p>
+<p>thank u sir&#8230;</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-33854' onclick='return addComment.moveForm( "comment-33854", "33854", "respond", "2888" )' aria-label='Reply to manu'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-33434">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">mvprasad</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-10-27T05:17:23+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-33434" class="comment-time-link" itemprop="url">October 27, 2015 at 5:17 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Can u please help me to do java project ‘online shopping’ in spring sts?</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-33434' onclick='return addComment.moveForm( "comment-33434", "33434", "respond", "2888" )' aria-label='Reply to mvprasad'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-33433">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">mvprasad</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-10-27T05:13:14+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-33433" class="comment-time-link" itemprop="url">October 27, 2015 at 5:13 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>i want to download SPRING Tutorial(pdf) send me link to download</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-33433' onclick='return addComment.moveForm( "comment-33433", "33433", "respond", "2888" )' aria-label='Reply to mvprasad'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-33106">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Track Your CV in Minutes</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-09-06T06:44:28+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-33106" class="comment-time-link" itemprop="url">September 6, 2015 at 6:44 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Fantastic Work for collating all the use cases and best examples.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-33106' onclick='return addComment.moveForm( "comment-33106", "33106", "respond", "2888" )' aria-label='Reply to Track Your CV in Minutes'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-32865">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Amit</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-07-28T23:08:04+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-32865" class="comment-time-link" itemprop="url">July 28, 2015 at 11:08 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>i am new in spring ..plz can u upload the examples on spring integration..thankful to you</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-32865' onclick='return addComment.moveForm( "comment-32865", "32865", "respond", "2888" )' aria-label='Reply to Amit'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-32719">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">ArunVasanth</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-07-01T06:13:49+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-32719" class="comment-time-link" itemprop="url">July 1, 2015 at 6:13 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Most Effective work pankaj&#8230; I can&#8217;t seen ever like this&#8230; all the best for future updates&#8230;</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-32719' onclick='return addComment.moveForm( "comment-32719", "32719", "respond", "2888" )' aria-label='Reply to ArunVasanth'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-32643">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Arunkumar</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-06-17T19:30:19+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-32643" class="comment-time-link" itemprop="url">June 17, 2015 at 7:30 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Great Work Mr.Pankaj, Thanks for your efforts.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-32643' onclick='return addComment.moveForm( "comment-32643", "32643", "respond", "2888" )' aria-label='Reply to Arunkumar'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-32521">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Rohin</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-05-26T08:41:23+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-32521" class="comment-time-link" itemprop="url">May 26, 2015 at 8:41 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Can u please help me to do java project &#8216;online shopping&#8217; in spring sts?</p>
+<p>Thank you.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-32521' onclick='return addComment.moveForm( "comment-32521", "32521", "respond", "2888" )' aria-label='Reply to Rohin'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-31581">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Ravi</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-01-29T22:05:33+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-31581" class="comment-time-link" itemprop="url">January 29, 2015 at 10:05 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>I am deliberately waiting for spring integration examples.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-31581' onclick='return addComment.moveForm( "comment-31581", "31581", "respond", "2888" )' aria-label='Reply to Ravi'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-31281">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">trinsit.w</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-12-29T02:24:58+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-31281" class="comment-time-link" itemprop="url">December 29, 2014 at 2:24 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Great set of articles!</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-31281' onclick='return addComment.moveForm( "comment-31281", "31281", "respond", "2888" )' aria-label='Reply to trinsit.w'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-31138">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">danush</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-12-16T03:11:01+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-31138" class="comment-time-link" itemprop="url">December 16, 2014 at 3:11 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>where i can get the schema in spring documentation?how to add that schema in applicationContext.xml</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-31138' onclick='return addComment.moveForm( "comment-31138", "31138", "respond", "2888" )' aria-label='Reply to danush'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-31082">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Kanika</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-12-10T04:53:05+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-31082" class="comment-time-link" itemprop="url">December 10, 2014 at 4:53 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Awesome Awesome work.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-31082' onclick='return addComment.moveForm( "comment-31082", "31082", "respond", "2888" )' aria-label='Reply to Kanika'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-30423">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Raj</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-10-09T07:22:49+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-30423" class="comment-time-link" itemprop="url">October 9, 2014 at 7:22 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Great and handy blog for any developer.<br />
+Fantastic effort Pankaj!!!</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-30423' onclick='return addComment.moveForm( "comment-30423", "30423", "respond", "2888" )' aria-label='Reply to Raj'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-30225">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Ananya</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-09-22T13:45:23+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-30225" class="comment-time-link" itemprop="url">September 22, 2014 at 1:45 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi Pankaj,could you please add some spring batch interview questions.Your blog helped me a lot.thanks</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-30225' onclick='return addComment.moveForm( "comment-30225", "30225", "respond", "2888" )' aria-label='Reply to Ananya'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-29428">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Nikhil</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-07-08T05:04:21+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-29428" class="comment-time-link" itemprop="url">July 8, 2014 at 5:04 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>You have explained in very easy way.Everyone can understand with very less effort.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-29428' onclick='return addComment.moveForm( "comment-29428", "29428", "respond", "2888" )' aria-label='Reply to Nikhil'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-29344">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">wilson</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-06-25T14:17:12+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-29344" class="comment-time-link" itemprop="url">June 25, 2014 at 2:17 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>nice!, Do you have an example with mock using spring-test?, anyway, thanks !</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-29344' onclick='return addComment.moveForm( "comment-29344", "29344", "respond", "2888" )' aria-label='Reply to wilson'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-29000">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">torres</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-05-26T01:20:46+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-29000" class="comment-time-link" itemprop="url">May 26, 2014 at 1:20 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>thanks ,i have learned a lot from this blog&#8230;</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-29000' onclick='return addComment.moveForm( "comment-29000", "29000", "respond", "2888" )' aria-label='Reply to torres'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-28978">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Ramesh kumar</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-05-23T03:39:25+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-28978" class="comment-time-link" itemprop="url">May 23, 2014 at 3:39 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>This is a nice tutorial.. .it helps me to gain knowledge quickly..</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-28978' onclick='return addComment.moveForm( "comment-28978", "28978", "respond", "2888" )' aria-label='Reply to Ramesh kumar'>Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment odd alt depth-2" id="comment-29282">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">abhishek</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-06-19T06:38:41+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-29282" class="comment-time-link" itemprop="url">June 19, 2014 at 6:38 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>This is great place to learn. Great work Pankaj</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-29282' onclick='return addComment.moveForm( "comment-29282", "29282", "respond", "2888" )' aria-label='Reply to abhishek'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-28974">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Yusf</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-05-23T01:54:28+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-28974" class="comment-time-link" itemprop="url">May 23, 2014 at 1:54 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>&#8220;baie lekker&#8221; an Afrikaans word for very nice..not sure about the spelling thou..lol. Thnx Pankaj</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-28974' onclick='return addComment.moveForm( "comment-28974", "28974", "respond", "2888" )' aria-label='Reply to Yusf'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-28920">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">NVPRASAD</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-05-19T05:11:01+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-28920" class="comment-time-link" itemprop="url">May 19, 2014 at 5:11 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Excellent Pankaj ..Great work nice clarity about the subject and your content is too good&#8230;.</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-28920' onclick='return addComment.moveForm( "comment-28920", "28920", "respond", "2888" )' aria-label='Reply to NVPRASAD'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-28858">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">vinodh</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-05-12T22:08:31+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-28858" class="comment-time-link" itemprop="url">May 12, 2014 at 10:08 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Pankaj,<br />
+This is helping me for interview preparation as there is less time for preparation.<br />
+regards<br />
+vinodh</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-28858' onclick='return addComment.moveForm( "comment-28858", "28858", "respond", "2888" )' aria-label='Reply to vinodh'>Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment odd alt depth-2" id="comment-32775">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">Sridher</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2015-07-13T05:19:25+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-32775" class="comment-time-link" itemprop="url">July 13, 2015 at 5:19 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Superb Article Pankaj garu</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-32775' onclick='return addComment.moveForm( "comment-32775", "32775", "respond", "2888" )' aria-label='Reply to Sridher'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-28810">
+	<article itemprop="comment" itemscope itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">itisme</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2014-05-07T02:48:10+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial#comment-28810" class="comment-time-link" itemprop="url">May 7, 2014 at 2:48 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Great Effort Pankaj&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.!</p>
+		</div>
+
+		<div class="comment-reply"><a rel='nofollow' class='comment-reply-link' href='#comment-28810' onclick='return addComment.moveForm( "comment-28810", "28810", "respond", "2888" )' aria-label='Reply to itisme'>Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ol></div>	<div class="comment-policy-box">
+		<p class="comment-policy"><small><strong>Comment Policy:</strong>Please submit comments to add value to the post. Comments like "Thank You" and "Awesome Post" will be not published. If you want to post code then wrap them inside &lt;pre&gt; tags. For example <strong>&lt;pre&gt;class Foo { }&lt;/pre&gt;</strong>.<br>If you want to post XML content, then please escape &lt; with &amp;lt; and > with &amp;gt; otherwise they will not be shown properly.</small></p>
+	</div>
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2888/spring-tutorial-spring-core-tutorial#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.journaldev.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='2888' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<!-- Anti-spam plugin v.5.2 wordpress.org/plugins/anti-spam/ -->
+		<p class="antispam-group antispam-group-q" style="clear: both;">
+			<label>Current ye@r <span class="required">*</span></label>
+			<input type="hidden" name="antspm-a" class="antispam-control antispam-control-a" value="2018" />
+			<input type="text" name="antspm-q" class="antispam-control antispam-control-q" value="5.2" autocomplete="off" />
+		</p>
+		<p class="antispam-group antispam-group-e" style="display: none;">
+			<label>Leave this field empty</label>
+			<input type="text" name="antspm-e-email-url-website" class="antispam-control antispam-control-e" value="" autocomplete="off" />
+		</p>
+			</form>
+			</div><!-- #respond -->
+	</main><aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" itemscope itemtype="https://schema.org/WPSideBar"><section id="search-3" class="widget widget_search"><div class="widget-wrap"><div id='ajaxsearchlite1' class="wpdreams_asl_container asl_w asl_m asl_m_1">
+<div class="probox">
+
+    
+    <div class='promagnifier'>
+                <div class='innericon'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                <path id="magnifier-2-icon" d="M460.355,421.59L353.844,315.078c20.041-27.553,31.885-61.437,31.885-98.037
+                    C385.729,124.934,310.793,50,218.686,50C126.58,50,51.645,124.934,51.645,217.041c0,92.106,74.936,167.041,167.041,167.041
+                    c34.912,0,67.352-10.773,94.184-29.158L419.945,462L460.355,421.59z M100.631,217.041c0-65.096,52.959-118.056,118.055-118.056
+                    c65.098,0,118.057,52.959,118.057,118.056c0,65.096-52.959,118.056-118.057,118.056C153.59,335.097,100.631,282.137,100.631,217.041
+                    z"/>
+            </svg>
+        </div>
+    </div>
+
+    
+    
+    <div class='prosettings' style='display:none;' data-opened=0>
+                <div class='innericon'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                <polygon id="arrow-25-icon" transform = "rotate(90 256 256)" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "/>
+            </svg>
+        </div>
+    </div>
+
+    
+    
+    <div class='proinput'>
+        <form autocomplete="off" aria-label='Ajax search form'>
+            <input aria-label='Search input' type='search' class='orig' name='phrase' placeholder='Instantly Search Tutorials...' value='' autocomplete="off"/>
+            <input aria-label='Autocomplete input, do not use this' type='text' class='autocomplete' name='phrase' value='' autocomplete="off"/>
+            <span class='loading'></span>
+            <input type='submit' value="Start search" style='width:0; height: 0; visibility: hidden;'>
+        </form>
+    </div>
+
+    
+    
+    <div class='proloading'>
+
+        <div class="asl_loader"><div class="asl_loader-inner asl_simple-circle"></div></div>
+
+            </div>
+
+            <div class='proclose'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                 y="0px"
+                 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
+                 xml:space="preserve">
+            <polygon id="x-mark-icon"
+                     points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "/>
+        </svg>
+        </div>
+    
+    
+</div>
+</div>
+
+
+<div id='ajaxsearchlitesettings1' class="searchsettings wpdreams_asl_settings asl_w asl_s asl_s_1">
+    <form name='options' autocomplete='off'>
+
+        
+                <fieldset class="asl_sett_scroll">
+            <legend style="display: none;">Generic selectors</legend>
+            <div class="asl_option_inner hiddend">
+                <input type='hidden' name='qtranslate_lang' id='qtranslate_lang'
+                       value='0'/>
+            </div>
+
+	        
+            
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="checked" id="set_exactonly1"
+                           title="Exact matches only"
+                           name="set_exactonly" />
+                    <label for="set_exactonly1">Exact matches only</label>
+                </div>
+                <div class="asl_option_label">
+                    Exact matches only                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_intitle1"
+                           title="Search in title"
+                           name="set_intitle"  checked="checked"/>
+                    <label for="set_intitle1">Search in title</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in title                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_incontent1"
+                           title="Search in content"
+                           name="set_incontent"  checked="checked"/>
+                    <label for="set_incontent1">Search in content</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in content                </div>
+            </div>
+            <div class="asl_option_inner hiddend">
+                <input type="checkbox" value="None" id="set_inexcerpt1"
+                       title="Search in excerpt"
+                       name="set_inexcerpt"  checked="checked"/>
+                <label for="set_inexcerpt1">Search in excerpt</label>
+            </div>
+
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_inposts1"
+                           title="Search in posts"
+                           name="set_inposts"  checked="checked"/>
+                    <label for="set_inposts1">Search in posts</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in posts                </div>
+            </div>
+            <div class="asl_option">
+                <div class="asl_option_inner">
+                    <input type="checkbox" value="None" id="set_inpages1"
+                           title="Search in pages"
+                           name="set_inpages"  checked="checked"/>
+                    <label for="set_inpages1">Search in pages</label>
+                </div>
+                <div class="asl_option_label">
+                    Search in pages                </div>
+            </div>
+                    </fieldset>
+                    </form>
+</div>
+
+<div id='ajaxsearchliteres1' class='vertical wpdreams_asl_results asl_w asl_r asl_r_1'>
+
+    
+    <div class="results">
+
+        
+            <div class="resdrg">
+            </div>
+
+        
+    </div>
+
+    
+    
+</div>
+
+    <div id="asl_hidden_data">
+        <svg style="position:absolute" height="0" width="0">
+            <filter id="aslblur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+            </filter>
+        </svg>
+        <svg style="position:absolute" height="0" width="0">
+            <filter id="no_aslblur"></filter>
+        </svg>
+
+    </div>
+
+<div class="asl_init_data wpdreams_asl_data_ct" style="display:none !important;" id="asl_init_id_1" data-asldata="ew0KICAgICJob21ldXJsIjogImh0dHBzOi8vd3d3LmpvdXJuYWxkZXYuY29tLyIsDQogICAgInJlc3VsdHN0eXBlIjogInZlcnRpY2FsIiwNCiAgICAicmVzdWx0c3Bvc2l0aW9uIjogImhvdmVyIiwNCiAgICAiaXRlbXNjb3VudCI6IDQsDQogICAgImltYWdld2lkdGgiOiA3MCwNCiAgICAiaW1hZ2VoZWlnaHQiOiA3MCwNCiAgICAicmVzdWx0aXRlbWhlaWdodCI6ICI3MHB4IiwNCiAgICAic2hvd2F1dGhvciI6IDAsDQogICAgInNob3dkYXRlIjogMCwNCiAgICAic2hvd2Rlc2NyaXB0aW9uIjogMCwNCiAgICAiY2hhcmNvdW50IjogIDMsDQogICAgImRlZmF1bHRJbWFnZSI6ICJodHRwczovL3d3dy5qb3VybmFsZGV2LmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOC8xMC83MHg3MC5wbmciLA0KICAgICJoaWdobGlnaHQiOiAwLA0KICAgICJoaWdobGlnaHR3aG9sZXdvcmRzIjogMSwNCiAgICAic2Nyb2xsVG9SZXN1bHRzIjogMCwNCiAgICAicmVzdWx0YXJlYWNsaWNrYWJsZSI6IDEsDQogICAgImF1dG9jb21wbGV0ZSI6IHsNCiAgICAgICAgImVuYWJsZWQiIDogMSwNCiAgICAgICAgImxhbmciIDogImVuIg0KICAgIH0sDQogICAgInRyaWdnZXJvbnR5cGUiOiAxLA0KICAgICJ0cmlnZ2VyX29uX2NsaWNrIjogMCwNCiAgICAidHJpZ2dlcl9vbl9mYWNldF9jaGFuZ2UiOiAxLA0KICAgICJzZXR0aW5nc2ltYWdlcG9zIjogInJpZ2h0IiwNCiAgICAiaHJlc3VsdGFuaW1hdGlvbiI6ICJmeC1ub25lIiwNCiAgICAidnJlc3VsdGFuaW1hdGlvbiI6ICJmeC1ub25lIiwNCiAgICAiaHJlc3VsdGhpZGVkZXNjIjogIjEiLA0KICAgICJwcmVzY29udGFpbmVyaGVpZ2h0IjogIjQwMHB4IiwNCiAgICAicHNob3dzdWJ0aXRsZSI6ICIwIiwNCiAgICAicHNob3dkZXNjIjogIjEiLA0KICAgICJjbG9zZU9uRG9jQ2xpY2siOiAxLA0KICAgICJpaWZOb0ltYWdlIjogImRlc2NyaXB0aW9uIiwNCiAgICAiaWlSb3dzIjogMiwNCiAgICAiaWl0ZW1zV2lkdGgiOiAyMDAsDQogICAgImlpdGVtc0hlaWdodCI6IDIwMCwNCiAgICAiaWlzaG93T3ZlcmxheSI6IDEsDQogICAgImlpYmx1ck92ZXJsYXkiOiAxLA0KICAgICJpaWhpZGVDb250ZW50IjogMSwNCiAgICAiaWlhbmltYXRpb24iOiAiMSIsDQogICAgImFuYWx5dGljcyI6IDAsDQogICAgImFuYWx5dGljc1N0cmluZyI6ICIiLA0KICAgICJyZWRpcmVjdG9uY2xpY2siOiAxLA0KICAgICJyZWRpcmVjdENsaWNrVG8iOiAicmVzdWx0c19wYWdlIiwNCiAgICAicmVkaXJlY3RDbGlja0xvYyI6ICJzYW1lIiwNCiAgICAicmVkaXJlY3Rfb25fZW50ZXIiOiAxLA0KICAgICJyZWRpcmVjdEVudGVyVG8iOiAicmVzdWx0c19wYWdlIiwNCiAgICAicmVkaXJlY3RFbnRlckxvYyI6ICJzYW1lIiwNCiAgICAicmVkaXJlY3RfdXJsIjogIj9zPXtwaHJhc2V9IiwNCiAgICAib3ZlcnJpZGV3cGRlZmF1bHQiOiAwLA0KICAgICJvdmVycmlkZV9tZXRob2QiOiAiZ2V0Ig0KfQ0K"></div>
+</div></section>
+
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<section id="adswidget6-quick-adsense-2" class="widget widget_adswidget6-quick-adsense"><div class="widget-wrap"><!-- /8491498/journaldev_video -->
+<div id='div-gpt-ad-1539114023134-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1539114023134-0'); });
+</script>
+</div></div></section>
+
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<section id="adswidget9-quick-adsense-3" class="widget widget_adswidget9-quick-adsense"><div class="widget-wrap"><!-- 300x250/300x600/160x600 -->
+<div id="waldo-tag-2282"></div></div></section>
+<section id="text-4" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Spring Framework</h4>
+			<div class="textwidget"><h3><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial" target="_blank" rel="noopener">Spring Tutorial</a></h3>
+<h4>Spring Core</h4>
+<ol>
+<li><a href="https://www.journaldev.com/16922/spring-framework" target="_blank" rel="noopener">Spring Framework</a></li>
+<li><a href="https://www.journaldev.com/2410/spring-dependency-injection" target="_blank" rel="noopener">Spring Dependency Injection</a></li>
+<li><a href="https://www.journaldev.com/2461/spring-ioc-bean-example-tutorial" target="_blank" rel="noopener">Spring IoC and Bean</a></li>
+<li><a href="https://www.journaldev.com/2637/spring-bean-life-cycle" target="_blank" rel="noopener">Spring Bean Life Cycle</a></li>
+<li><a href="https://www.journaldev.com/2552/spring-rest-example-tutorial-spring-restful-web-services" target="_blank" rel="noopener">Spring REST</a></li>
+<li><a href="https://www.journaldev.com/8934/spring-rest-xml-and-json-example" target="_blank" rel="noopener">Spring REST XML</a></li>
+<li><a href="https://www.journaldev.com/17096/spring-resttemplate-example" target="_blank" rel="noopener">Spring RestTemplate</a></li>
+<li><a href="https://www.journaldev.com/2583/spring-aop-example-tutorial-aspect-advice-pointcut-joinpoint-annotations" target="_blank" rel="noopener">Spring AOP</a></li>
+<li><a href="https://www.journaldev.com/7801/spring-aop-method-profiling" target="_blank" rel="noopener">Spring AOP Method Profiling</a></li>
+<li><a href="https://www.journaldev.com/16966/spring-annotations" target="_blank" rel="noopener">Spring Annotations</a></li>
+<li><a href="https://www.journaldev.com/2623/spring-autowired-annotation" target="_blank" rel="noopener">Spring @Autowired</a></li>
+<li><a href="https://www.journaldev.com/3358/spring-requestmapping-requestparam-pathvariable-example" target="_blank" rel="noopener">Spring @RequestMapping</a></li>
+</ol>
+<h4>Spring MVC</h4>
+<ol>
+<li><a href="https://www.journaldev.com/14476/spring-mvc-example" target="_blank" rel="noopener">Spring MVC Example</a></li>
+<li><a href="https://www.journaldev.com/2433/spring-mvc-tutorial" target="_blank" rel="noopener">Spring MVC Tutorial</a></li>
+<li><a href="https://www.journaldev.com/2651/spring-mvc-exception-handling-controlleradvice-exceptionhandler-handlerexceptionresolver" target="_blank" rel="noopener">Spring MVC Exception Handling</a></li>
+<li><a href="https://www.journaldev.com/2668/spring-validation-example-mvc-validator" target="_blank" rel="noopener">Spring MVC Validator</a></li>
+<li><a href="https://www.journaldev.com/2676/spring-mvc-interceptor-example-handlerinterceptor-handlerinterceptoradapter" target="_blank" rel="noopener">Spring MVC Intercepter</a></li>
+<li><a href="https://www.journaldev.com/2573/spring-mvc-file-upload-example-single-multiple-files" target="_blank" rel="noopener">Spring MVC File Upload</a></li>
+<li><a href="https://www.journaldev.com/2610/spring-mvc-internationalization-i18n-and-localization-l10n-example" target="_blank" rel="noopener">Spring MVC i18n</a></li>
+<li><a href="https://www.journaldev.com/3531/spring-mvc-hibernate-mysql-integration-crud-example-tutorial" target="_blank" rel="noopener">Spring MVC Hibernate MqSQL</a></li>
+</ol>
+<h4>Spring ORM</h4>
+<ol>
+<li><a href="https://www.journaldev.com/7655/spring-orm-example-jpa-hibernate-transaction" target="_blank" rel="noopener">Spring ORM</a></li>
+<li><a href="https://www.journaldev.com/7772/spring-orm-example-with-jpa-hibernate-aop-transactions" target="_blank" rel="noopener">Spring ORM JPA</a></li>
+<li><a href="https://www.journaldev.com/17034/spring-data-jpa" target="_blank" rel="noopener">Spring Data JPA</a></li>
+<li><a href="https://www.journaldev.com/2603/spring-transaction-management-jdbc-example" target="_blank" rel="noopener">Spring Transaction</a></li>
+<li><a href="https://www.journaldev.com/17053/spring-jdbctemplate-example" target="_blank" rel="noopener">Spring JdbcTemplate</a></li>
+</ol>
+<h4>Spring Security</h4>
+<ol>
+<li><a href="https://www.journaldev.com/8669/introduction-to-spring-4-security" target="_blank" rel="noopener">Spring Security Overview</a></li>
+<li><a href="https://www.journaldev.com/2715/spring-security-example-tutorial" target="_blank" rel="noopener">Spring Security Example Tutorial</a></li>
+<li><a href="https://www.journaldev.com/2736/spring-security-example-userdetailsservice" target="_blank" rel="noopener">Spring Security UserDetailsService</a></li>
+<li><a href="https://www.journaldev.com/8718/spring-4-security-mvc-login-logout-example" target="_blank" rel="noopener">Spring MVC Login Logout</a></li>
+<li><a href="https://www.journaldev.com/8748/spring-4-mvc-security-managing-roles-example" target="_blank" rel="noopener">Spring Security Roles</a></li>
+</ol>
+<h4>Spring Boot</h4>
+<ol>
+<li><a href="https://www.journaldev.com/7969/spring-boot-tutorial" target="_blank" rel="noopener">Spring Boot Tutorial</a></li>
+<li><a href="https://www.journaldev.com/7989/key-components-and-internals-of-spring-boot-framework" target="_blank" rel="noopener">Spring Boot Components</a></li>
+<li><a href="https://www.journaldev.com/8195/spring-boot-cli-setup-and-helloworld-example" target="_blank" rel="noopener">Spring Boot CLI Hello World</a></li>
+<li><a href="https://www.journaldev.com/8225/spring-boot-initilizr-web-interface" target="_blank" rel="noopener">Spring Boot Initilizr Web</a></li>
+<li><a href="https://www.journaldev.com/8596/spring-boot-initilizr-with-ides-or-ide-plugins" target="_blank" rel="noopener">Spring Boot Initilizr IDE</a></li>
+<li><a href="https://www.journaldev.com/8609/spring-boot-initilizr-with-spring-boot-cli" target="_blank" rel="noopener">Spring Boot Initilizr CLI</a></li>
+<li><a href="https://www.journaldev.com/8650/spring-boot-initilizr-with-thirdparty-tools" target="_blank" rel="noopener">Spring Boot Initilizr Tools</a></li>
+<li><a href="https://www.journaldev.com/18156/spring-boot-mongodb" target="_blank" rel="noopener">Spring Boot MongoDB</a></li>
+<li><a href="https://www.journaldev.com/18141/spring-boot-redis-cache" target="_blank" rel="noopener">Spring Boot Redis Cache</a></li>
+<li><a href="https://www.journaldev.com/8611/spring-boot-interview-questions" target="_blank" rel="noopener">Spring Boot Interview Questions</a></li>
+</ol>
+<h4>Spring Batch</h4>
+<ol>
+<li><a href="https://www.journaldev.com/17119/spring-batch" target="_blank" rel="noopener">Spring Batch</a></li>
+<li><a href="https://www.journaldev.com/17157/spring-batch-example" target="_blank" rel="noopener">Spring Batch Example</a></li>
+</ol>
+<h4>Spring AMQP</h4>
+<ol>
+<li><a href="https://www.journaldev.com/11643/spring-amqp" target="_blank" rel="noopener">Spring AMQP</a></li>
+<li><a href="https://www.journaldev.com/11655/spring-rabbitmq" target="_blank" rel="noopener">Spring RabbitMQ</a></li>
+<li><a href="https://www.journaldev.com/11713/spring-amqp-rabbitmq-example" target="_blank" rel="noopener">Spring AMQP RabbitMQ</a></li>
+<li><a href="https://www.journaldev.com/11766/apache-activemq" target="_blank" rel="noopener">Apache ActiveMQ</a></li>
+<li><a href="https://www.journaldev.com/12697/spring-amqp-activemq-tutorial" target="_blank" rel="noopener">Spring ActiveMQ Tutorial</a></li>
+<li><a href="https://www.journaldev.com/12743/spring-activemq-example" target="_blank" rel="noopener">Spring ActiveMQ Example</a></li>
+</ol>
+<h4>Spring Integrations</h4>
+<ol>
+<li><a href="https://www.journaldev.com/2593/spring-jdbc-example" target="_blank" rel="noopener">Spring JDBC</a></li>
+<li><a href="https://www.journaldev.com/2597/spring-datasource-jndi-with-tomcat-example" target="_blank" rel="noopener">Spring DataSource JNDI</a></li>
+<li><a href="https://www.journaldev.com/3524/spring-hibernate-integration-example-tutorial" target="_blank" rel="noopener">Spring Hibernate</a></li>
+<li><a href="https://www.journaldev.com/4058/primefaces-spring-4-with-jpa-hibernate-eclipselink-example-tutorial" target="_blank" rel="noopener">Spring Primefaces JPA</a></li>
+<li><a href="https://www.journaldev.com/4061/primefaces-spring-eclipselink-nosql-mongodb-oracle-nosql-db" target="_blank" rel="noopener">Spring Primefaces MongoDB</a></li>
+<li><a href="https://www.journaldev.com/4096/primefaces-spring-hibernate-integration-example-tutorial" target="_blank" rel="noopener">Spring Primefaces Hibernate</a></li>
+<li><a href="https://www.journaldev.com/4260/primefaces-hibernate-and-springroo-integration" target="_blank" rel="noopener">SpringRoo Primefaces Hibernate</a></li>
+<li><a href="https://www.journaldev.com/7112/jsf-spring-integration-example-tutorial" target="_blank" rel="noopener">Spring JSF</a></li>
+<li><a href="https://www.journaldev.com/7122/jsf-spring-hibernate-integration-example-tutorial" target="_blank" rel="noopener">Spring JDF Hibernate</a></li>
+</ol>
+<h4>Miscellaneous</h4>
+<ol>
+<li><a href="https://www.journaldev.com/4144/spring-data-mongodb-example" target="_blank" rel="noopener">Spring Data MongoDB</a></li>
+<li><a href="https://www.journaldev.com/2696/spring-interview-questions-and-answers" target="_blank" rel="noopener">Spring Interview Questions</a></li>
+</ol>
+</div>
+		</div></section>
+<section id="text-11" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Recommended Tutorials</h4>
+			<div class="textwidget"><h4>Java Tutorials</h4>
+<ul>
+<li><a href="https://www.journaldev.com/942/java-io-tutorial" target="_blank">Java IO</a></li>
+<li><a href="https://www.journaldev.com/634/regular-expression-in-java-regex-example" target="_blank">Java Regular Expressions</a></li>
+<li><a href="https://www.journaldev.com/1079/multithreading-in-java" target="_blank">Multithreading in Java</a></li>
+<li><a href="https://www.journaldev.com/977/java-logging-api-tutorial-examples-logger-levels-handlers-formatters-filters" target="_blank">Java Logging</a></li>
+<li><a href="https://www.journaldev.com/721/java-annotations-example-tutorial" target="_blank">Java Annotations</a></li>
+<li><a href="https://www.journaldev.com/1240/java-xml-tutorial" target="_blank">Java XML</a></li>
+<li><a href="https://www.journaldev.com/1260/collections-in-java-tutorial" target="_blank">Collections in Java</a></li>
+<li><a href="https://www.journaldev.com/1663/java-generics-example-method-class-interface" target="_blank">Java Generics</a></li>
+<li><a href="https://www.journaldev.com/1696/exception-handling-in-java" target="_blank">Exception Handling in Java</a></li>
+<li><a href="https://www.journaldev.com/1789/java-reflection-example-tutorial" target="_blank">Java Reflection</a></li>
+<li><a href="https://www.journaldev.com/1827/java-design-patterns-example-tutorial" target="_blank">Java Design Patterns</a></li>
+<li><a href="https://www.journaldev.com/2681/jdbc-tutorial-with-example-projects-datasource-jndi-and-spring-integration" target="_blank">JDBC Tutorial</a></li>
+<h4>Java EE Tutorials</h4>
+<li><a href="https://www.journaldev.com/2114/servlet-jsp-tutorial" target="_blank">Servlet JSP Tutorial</a></li>
+<li><a href="https://www.journaldev.com/2310/struts2-tutorial-with-example-projects" target="_blank">Struts2 Tutorial</a></li>
+<li><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial" target="_blank">Spring Tutorial</a></li>
+<li><a href="https://www.journaldev.com/3793/hibernate-tutorial" target="_blank">Hibernate Tutorial</a></li>
+<li><a href="https://www.journaldev.com/5516/primefaces-tutorial-with-example-projects" target="_blank">Primefaces Tutorial</a></li>
+<li><a href="https://www.journaldev.com/255/axis2-web-services-tutorial" target="_blank">Apache Axis 2</a></li>
+<li><a href="https://www.journaldev.com/498/jax-rs-restful-web-service-using-jersey-example-tutorial" target="_blank">JAX-RS</a></li>
+<li><a href="https://www.journaldev.com/1117/memcached-tutorial" target="_blank">Memcached Tutorial</a></li>
+</ul>
+</div>
+		</div></section>
+
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<section id="adswidget10-quick-adsense-2" class="widget widget_adswidget10-quick-adsense"><div class="widget-wrap"><!-- 300x250/300x600/160x600 -->
+<div id="waldo-tag-2283"></div></div></section>
+</aside></div></div><footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter"><div class="wrap"><p>&#x000A9;&nbsp;2018 &middot; <a href="https://www.journaldev.com/privacy-policy">Privacy Policy</a> &middot; Powered by <a href="https://wordpress.org/" title="WordPress">WordPress</a></p></div></footer></div></script>
+<script type='text/javascript'>
+    function _dmBootstrap(file) {
+        var _dma = document.createElement('script');
+        _dma.type = 'text/javascript';
+        _dma.async = true;
+        _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);
+    }
+    function _dmFollowup(file) { if (typeof DMAds === 'undefined') _dmBootstrap('cdn2.DeveloperMedia.com/a.min.js'); }
+    (function () { _dmBootstrap('cdn1.DeveloperMedia.com/a.min.js'); setTimeout(_dmFollowup, 2000); })();
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12171637-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-12171637-4', { 'anonymize_ip': true });
+</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+		  jQuery('pre code').each(function(i, block) {
+			hljs.highlightBlock(block);
+			$(".entry-content pre").show();
+		  });
+		  	
+			jQuery('.entry-content pre code').mouseenter(function(e){
+				var t = jQuery(this);
+					t.children(".re_clip-board").slideDown(100);
+				jQuery(e.target).mouseleave(function(){
+					t.children(".re_clip-board").slideUp(100);
+					
+					setTimeout(function() {
+						t.children(".re_clip-board").text("Copy");
+					}, 100);
+					
+				});
+			});
+			
+			jQuery('.entry-content pre code .re_clip-board').click(function(e){
+				re_copyToClipboard(jQuery(this));
+				$(this).text("Copied!");
+				$(this).css("width", "85px");
+			});
+		});
+		
+function re_copyToClipboard(element) {
+	var elements = element.parent();
+  	var $temp = $("<textarea>");
+  	$("body").append($temp);
+	var text = $(elements).text().replace(/Copy/g, "");
+  	$temp.val(text).select();
+  	document.execCommand("copy");
+  	$temp.remove();
+}
+
+/*Starting expand widget jquery codes */
+var rotation = 0;
+jQuery.fn.plus_rotate = function(degrees) {
+    $(this).css({"-webkit-transform" : "rotate("+ degrees +"deg)",
+                 "-moz-transform" : "rotate("+ degrees +"deg)",
+                 "-ms-transform" : "rotate("+ degrees +"deg)",
+                 "transform" : "rotate("+ degrees +"deg)"});
+    return $(this);
+};
+
+$(document).ready(function(){
+  $(".expand_widget_title").click(function(){
+    if ( !$(this).parent().children("ul").is(":visible") ) {
+      rotation += 360;
+	  $(this).children(".widget_plus_icon").removeClass("zero_six_rotate");
+      $(this).children(".widget_plus_icon").addClass("tree_six_rotate");
+     $(this).parent().children("ul").slideDown(390);
+	 
+	 var t = $(this);
+	 setTimeout(function() {
+	 	t.children(".widget_plus_icon").removeClass("plus_icon");
+		t.children(".widget_plus_icon").addClass("minus_icon");
+	 }, 400);
+  } else {
+    rotation -= 360;
+     	$(this).children(".widget_plus_icon").removeClass("tree_six_rotate");
+		$(this).children(".widget_plus_icon").addClass("zero_six_rotate");
+    $(this).parent().children("ul").slideUp(390);
+	
+	var t = $(this);
+	 setTimeout(function() {
+	 	t.children(".widget_plus_icon").removeClass("minus_icon");
+		t.children(".widget_plus_icon").addClass("plus_icon");
+	 }, 400);
+  }
+  });
+ });
+
+/*Ending expand widget jquery codes */
+
+</script>
+	<script type='text/javascript' src='https://cdn.journaldev.com/wp-content/plugins/anti-spam/js/anti-spam-5.2.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1","visibility_show":"show","visibility_hide":"hide","width":"Auto","smooth_scroll_offset":"60"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-content/plugins/table-of-contents-plus/front.min.js'></script>
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-includes/js/comment-reply.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajaxsearchlite = {"ajaxurl":"https:\/\/www.journaldev.com\/wp-admin\/admin-ajax.php","backend_ajaxurl":"https:\/\/www.journaldev.com\/wp-admin\/admin-ajax.php","js_scope":"jQuery"};
+var ASL = {"ajaxurl":"https:\/\/www.journaldev.com\/wp-admin\/admin-ajax.php","backend_ajaxurl":"https:\/\/www.journaldev.com\/wp-admin\/admin-ajax.php","js_scope":"jQuery","detect_ajax":"0","scrollbar":"1","js_retain_popstate":"0","version":"4728"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-content/plugins/ajax-search-lite/js/min/jquery.ajaxsearchlite.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"sidebar","margin_top":10,"margin_bottom":0,"stop_id":"","screen_max_width":1024,"screen_max_height":120,"width_inherit":false,"refresh_interval":1500,"window_load_hook":false,"disable_mo_api":false,"widgets":["adswidget10-quick-adsense-2"]}];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js'></script>
+<script type='text/javascript' src='https://cdn.journaldev.com/wp-includes/js/wp-embed.min.js'></script>
+<script src="https://cdn.journaldev.com/min/lazyload.js"></script></body></html>
+
+<!-- Page generated by LiteSpeed Cache 2.6.4.1 on 2018-10-31 23:11:06 -->
